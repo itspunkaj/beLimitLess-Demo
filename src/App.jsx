@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Stories from './Components/stories'
+import Stories from './Components/Stories'
 import beLL from '/beLL.png'
 import { Swiper } from 'swiper/react'
 
