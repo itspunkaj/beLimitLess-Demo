@@ -18,7 +18,7 @@ const stories2 = [
       </div>
     ),
     seeMoreCollapsed: ()=>(
-      <div className='shadow-lg text-2xl bg-black/20 rounded-full text-white p-[10px] text-center'>
+      <div className='shadow-lg text-lg bg-black/20 rounded-full text-white p-[10px] text-center'>
         Experience
       </div>
     ),
@@ -40,7 +40,7 @@ const stories2 = [
       </div>
     ),
     seeMoreCollapsed: ()=>(
-      <div className='shadow-lg text-2xl bg-black/20 rounded-full text-white p-[10px] text-center'>
+      <div className='shadow-lg text-lg bg-black/20 rounded-full text-white p-[10px] text-center'>
         Motivation
       </div>
     ),
