@@ -6,11 +6,22 @@ import CustomVideoStory from './CustomVideoStory';
 // import video3 from './productSVG/vid3.mp4'
 
 const stories2 = [
-
   {
     // content : () => <CustomVideoStory url={video2}/>,
     url: video2,
     type: 'video',
+    seeMore: ({ close }) => (
+      <div style={{ padding: "20px", backgroundColor: "#fff" }}>
+        <h2>Additional Content</h2>
+        <p>Here is some more information about this story.</p>
+        <button onClick={close}>Close</button>
+      </div>
+    ),
+    seeMoreCollapsed: ()=>(
+      <div className='shadow-lg text-2xl bg-black/20 rounded-full text-white p-[10px] text-center'>
+        Experience
+      </div>
+    ),
     header: {
       heading: 'Pankaj Singh',
       subheading: 'Posted 30m ago',
@@ -21,6 +32,18 @@ const stories2 = [
     // content : () => <CustomVideoStory url={video}/>,
     url: video,
     type: 'video',
+    seeMore: ({ close }) => (
+      <div style={{ padding: "20px", backgroundColor: "#fff" }}>
+        <h2>Additional Content</h2>
+        <p>Here is some more information about this story.</p>
+        <button onClick={close}>Close</button>
+      </div>
+    ),
+    seeMoreCollapsed: ()=>(
+      <div className='shadow-lg text-2xl bg-black/20 rounded-full text-white p-[10px] text-center'>
+        Motivation
+      </div>
+    ),
     header: {
       heading: 'Pankaj Singh',
       subheading: 'Posted 30m ago',
