@@ -1,7 +1,7 @@
 
 import Stories from 'react-insta-stories';
-import video from './productSVG/vid.mp4'
-import video2 from './productSVG/vid2.mp4'
+import video from './productSVG/vid4.mp4'
+import video2 from './productSVG/vid5.mp4'
 import CustomVideoStory from './CustomVideoStory';
 // import video3 from './productSVG/vid3.mp4'
 
