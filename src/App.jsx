@@ -11,12 +11,21 @@ import { Pagination } from 'swiper/modules';
 import { MdCall } from 'react-icons/md'
 import { FaNoteSticky, FaPlus } from 'react-icons/fa6'
 import { FaSearch, FaShareSquare } from 'react-icons/fa'
+import Stories2 from './Components/Stories2'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical: true
+  };
 
   return (
-    <main className='h-[100dvh] w-screen bg-green-400'>
+    <main className='h-[100dvh] w-screen bg-gray-700'>
       <header className='h-[7%] bg-slate-100 flex items-center'>
         <div className='  flex justify-between  py-1 px-5 w-full'>
           <div>
@@ -27,29 +36,25 @@ function App() {
           </div>
         </div>
       </header>
-      {/* <Swiper
+      <Swiper
         direction={'vertical'}
         modules={[Pagination]}
-        style={{height : '86%'}}
+        style={{ height: '86%' }}
       >
-        <SwiperSlide className='h-full'> */}
-          <div className='w-fit mx-auto h-[86%]'>
-            <Stories />
-          </div>
-        {/* </SwiperSlide>
         <SwiperSlide className='h-full'>
-          <div className='w-fit mx-auto'>
-            <Stories />
-          </div>
+          <Stories className='h-full' />
         </SwiperSlide>
-      </Swiper> */}
+        <SwiperSlide className='h-full'>
+          <Stories2 className='h-full ' />
+        </SwiperSlide>
+      </Swiper>
       <div className='bg-slate-100 h-[7%] flex items-center'>
         <div className='  flex justify-between  py-1 px-5 w-full text-gray-700'>
           <MdCall className='h-6 w-6' />
-          <FaNoteSticky className='h-6 w-6 '/>
-          <FaSearch className='h-6 w-6'/>
-          <FaPlus className='h-6 w-6'/>
-          <FaShareSquare className='h-6 w-6'/>
+          <FaNoteSticky className='h-6 w-6 ' />
+          <FaSearch className='h-6 w-6' />
+          <FaPlus className='h-6 w-6' />
+          <FaShareSquare className='h-6 w-6' />
         </div>
       </div>
     </main>
