@@ -1,14 +1,16 @@
 
 import Stories from 'react-insta-stories';
-import video from './productSVG/vid4.mp4'
-import video2 from './productSVG/vid5.mp4'
+import video from './productSVG/vid.mp4'
+import video2 from './productSVG/vid2.mp4'
 import CustomVideoStory from './CustomVideoStory';
 // import video3 from './productSVG/vid3.mp4'
 
 const stories2 = [
 
   {
-    content : () => <CustomVideoStory url={video2}/>,
+    // content : () => <CustomVideoStory url={video2}/>,
+    url: video2,
+    type: 'video',
     header: {
       heading: 'Pankaj Singh',
       subheading: 'Posted 30m ago',
@@ -16,7 +18,9 @@ const stories2 = [
     },
   },
   {
-    content : () => <CustomVideoStory url={video}/>,
+    // content : () => <CustomVideoStory url={video}/>,
+    url: video,
+    type: 'video',
     header: {
       heading: 'Pankaj Singh',
       subheading: 'Posted 30m ago',
@@ -33,15 +37,15 @@ function Stories2() {
       height={'100%'}
       width={'100vw'}
       loop={true}
-      storyContainerStyles={{
-        height: '100%',
-        width: '100%'
-      }}
-      storyStyles={{
-        height: '100%',
-        width: '100%',
-        margin: '0'
-      }}
+      // storyContainerStyles={{
+      //   height: '100%',
+      //   width: '100%'
+      // }}
+      // storyStyles={{
+      //   height: '100%',
+      //   width: '100%',
+      //   margin: '0'
+      // }}
     />
   )
 }
