@@ -1,7 +1,7 @@
 
 import Stories, { WithSeeMore, WithHeader } from 'react-insta-stories';
-import video from './productSVG/vid4.mp4'
-import video2 from './productSVG/vid5.mp4'
+import video from './productSVG/vid.mp4'
+import video2 from './productSVG/vid2.mp4'
 // import video3 from './productSVG/vid3.mp4
 import CustomVideoStory from './CustomVideoStory';
 
@@ -11,7 +11,6 @@ function Story() {
     {
       url: video,
       type: 'video',
-
       seeMore: ({ close }) => (
         <div style={{ padding: "20px", backgroundColor: "#fff" }}>
           <h2>Additional Content</h2>
@@ -19,8 +18,8 @@ function Story() {
           <button onClick={close}>Close</button>
         </div>
       ),
-      seeMoreCollapsed: ()=>(
-        <div className='shadow-lg text-lg bg-black/20 rounded-full text-white p-[10px] text-center'>
+      seeMoreCollapsed: () => (
+        <div className='shadow-lg mb-1 text-lg bg-primaryPink rounded-full w-32 mx-auto text-white p-[10px] text-center'>
           Experience
         </div>
       ),
@@ -41,8 +40,8 @@ function Story() {
           <button onClick={close}>Close</button>
         </div>
       ),
-      seeMoreCollapsed: ()=>(
-        <div className='shadow-lg text-lg bg-black/20 rounded-full text-white p-[10px] text-center'>
+      seeMoreCollapsed: () => (
+        <div className='shadow-lg mb-1 text-lg bg-primaryPink rounded-full w-32 mx-auto text-white p-[10px] text-center'>
           Motivation
         </div>
       ),
@@ -60,15 +59,6 @@ function Story() {
       height={'100%'}
       width={'100vw'}
       loop={true}
-    // storyContainerStyles={{
-    //   height: '100%',
-    //   width: '100%'
-    // }}
-    // storyStyles={{
-    //   height: '100%',
-    //   width: '100%',
-    //   margin: '0'
-    // }}
     />
   )
 }

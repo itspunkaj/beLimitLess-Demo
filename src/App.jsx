@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState, lazy, Suspense } from 'react'
 import './App.css'
 import Stories from './Components/Stories'
 import beLL from '/beLL.png'
@@ -11,17 +11,35 @@ import { Pagination } from 'swiper/modules';
 import { MdCall } from 'react-icons/md'
 import { FaNoteSticky, FaPlus } from 'react-icons/fa6'
 import { FaSearch, FaShareSquare } from 'react-icons/fa'
-import Stories2 from './Components/Stories2'
+const Stories2 = lazy(() => import('./Components/Stories2'));
+
+
+
 
 function App() {
+  const storiesRef1 = useRef(null);
+  const storiesRef2 = useRef(null);
 
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    vertical: true
+  const handleSlideChange = (swiper) => {
+    const activeIndex = swiper.activeIndex;
+    if (activeIndex !== 0 && storiesRef1.current) {
+      storiesRef1.current.pauseVideos();
+    }
+
+    // Play videos in the first slide if active
+    if (activeIndex === 0 && storiesRef1.current) {
+      storiesRef1.current.playVideos();
+    }
+
+    // Pause videos in the second slide if not active
+    if (activeIndex !== 1 && storiesRef2.current) {
+      storiesRef2.current.pauseVideos();
+    }
+
+    // Play videos in the second slide if active
+    if (activeIndex === 1 && storiesRef2.current) {
+      storiesRef2.current.playVideos();
+    }
   };
 
   return (
@@ -40,12 +58,16 @@ function App() {
         direction={'vertical'}
         modules={[Pagination]}
         style={{ height: '86%' }}
+        onSlideChange={handleSlideChange}
       >
         <SwiperSlide className='h-full'>
-          <Stories className='h-full' />
+          <Stories ref={storiesRef1} className='h-full' />
         </SwiperSlide>
         <SwiperSlide className='h-full'>
-          <Stories2 className='h-full ' />
+          <Suspense>
+
+            <Stories2 ref={storiesRef2} className='h-full ' />
+          </Suspense>
         </SwiperSlide>
       </Swiper>
       <div className='bg-slate-100 h-[7%] flex items-center'>
