@@ -45,11 +45,11 @@ function App() {
   return (
     <main className='h-[100dvh] w-screen bg-gray-700'>
       <header className='h-[7%] bg-slate-100 flex items-center'>
-        <div className='  flex justify-between  py-1 px-5 w-full'>
-          <div>
+        <div className='  flex justify-between  py-1 px-5 w-full h-fit'>
+          <div className='h-fit w-fit'>
             <img src={beLL} className='h-8' />
           </div>
-          <div className='rounded-full overflow-hidden border-2 border-primaryPink'>
+          <div className='rounded-full overflow-hidden border-2 border-primaryPink h-fit w-fit'>
             <img className='h-8 ' src="https://pics.craiyon.com/2023-11-26/oMNPpACzTtO5OVERUZwh3Q.webp" />
           </div>
         </div>
